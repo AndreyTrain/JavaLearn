@@ -1,4 +1,4 @@
-import java.lang.reflect.Method;
+
 import java.util.Scanner;
 
 public class While {
@@ -21,6 +21,35 @@ public class While {
 
         }
 
+      int amount, x, y;
+
+      Scanner input = new Scanner(System.in);
+
+      System.out.print("Введите целое число: ");
+      x = input.nextInt();
+
+      y = 1;
+      amount = 0;
+
+
+      while(y <= x) {
+        amount = amount + y;
+        System.out.print(y);
+        ++y;
+
+        if (y <= x) {
+          System.out.print(" + ");
+        }
+
+        }
+
+      if (amount != (x * (x + 1)) / 2) {
+        System.out.println( " != " + "(" + x + " * " + "(" + x + " + 1)) / 2)");
+        System.out.print("Сумма левой части выражения равна: " + amount);
+      } else {
+        System.out.println(" = " + "(" + x + " * " + "(" + x + " + 1)) / 2)");
+        System.out.print("Сумма равна: " + amount);
+      }
 
     }
 
